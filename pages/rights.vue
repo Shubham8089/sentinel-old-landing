@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const { goToWaitlist } = useSite()
+useSeoMeta({
+  title: 'Rights · Sentinel',
+  description: 'Every data request gets a front door, a clock and an owner. Access, correction, erasure and grievances in one portal.',
+})
 
 const points = [
   {
@@ -29,9 +32,8 @@ const points = [
       <DsarDemo />
     </Reveal>
 
-    <Reveal class="flex flex-wrap items-center gap-4 border-t border-border pt-8">
-      <button type="button" class="btn-primary !px-5 !py-3" @click="goToWaitlist">Get your Trust Center</button>
-      <p class="text-sm text-muted">When someone asks, you already know who is answering and by when.</p>
+    <Reveal class="border-t border-border pt-8">
+      <PageNext to="/covered" label="What’s covered" blurb="What Sentinel handles, and what stays with you." />
     </Reveal>
   </div>
 </template>

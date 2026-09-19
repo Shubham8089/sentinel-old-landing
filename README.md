@@ -17,5 +17,6 @@ npm run typecheck
 
 - Design tokens live in `assets/css/main.css` and are wired into `tailwind.config.ts`.
 - Fonts (Fraunces, Inter, JetBrains Mono) are loaded through `@nuxt/fonts`.
-- `server/api/waitlist.post.ts` validates the email and **logs it only**. It does not persist anything yet. See the `TODO(waitlist-sink)` comment there before promoting the waitlist.
+- Setup-day requests open a pre-filled email. Address, and a future booking link, live in `utils/site.ts` (`SITE.bookingEmail` / `SITE.bookingUrl`).
+- `pages/our-trust-page.vue` makes factual claims about this site (no cookies, no trackers, fonts self-hosted, Vercel hosting). If you change any of that, update the page and bump its version.
 - This is a separate project from the app repo. Do not import from it.

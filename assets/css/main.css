@@ -94,6 +94,36 @@
   transform: translateY(-6px);
 }
 
+/* Editorial emphasis inside serif headlines */
+h1 em,
+h2 em,
+.accent-em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* Floating banner + command palette */
+.rise-enter-active,
+.rise-leave-active {
+  transition:
+    opacity 500ms var(--ease-calm),
+    transform 500ms var(--ease-calm);
+}
+.rise-enter-from,
+.rise-leave-to {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 220ms var(--ease-calm);
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 /* Small swaps inside mock UI */
 .swap-enter-active,
 .swap-leave-active {

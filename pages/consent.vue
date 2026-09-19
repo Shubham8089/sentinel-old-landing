@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const { goToWaitlist } = useSite()
+useSeoMeta({
+  title: 'Consent · Sentinel',
+  description: 'A clear choice for every visitor, and a receipt for each one. Banner, preference center and versioned notice.',
+})
+
 const { log } = useConsent()
 
 const points = [
@@ -13,7 +17,7 @@ const points = [
   },
   {
     title: 'Withdrawing is as easy as agreeing',
-    body: 'Change of mind takes one click, and every change is logged as its own receipt.',
+    body: 'A change of mind takes one click, and every change is logged as its own receipt.',
   },
 ]
 
@@ -37,8 +41,8 @@ const label = (c: string) => (c === 'accepted' ? 'accepted all' : c === 'rejecte
         <p class="mono-label mb-3">Consent ledger · this session</p>
         <div class="card p-5">
           <p v-if="!log.length" class="text-sm leading-relaxed text-muted">
-            No receipts yet. Make a choice in the banner and it shows up here, with a receipt ID, a time and the
-            notice version.
+            No receipts yet. Make a choice in the banner and it shows up here, with a receipt ID, a time and the notice
+            version.
           </p>
           <TransitionGroup v-else name="row" tag="ul" class="relative space-y-3">
             <li v-for="r in log" :key="r.id" class="border-b border-border pb-3 last:border-0 last:pb-0">
@@ -54,9 +58,8 @@ const label = (c: string) => (c === 'accepted' ? 'accepted all' : c === 'rejecte
       </Reveal>
     </div>
 
-    <Reveal class="flex flex-wrap items-center gap-4 border-t border-border pt-8">
-      <button type="button" class="btn-primary !px-5 !py-3" @click="goToWaitlist">Get your Trust Center</button>
-      <p class="text-sm text-muted">Consent is the first thing a visitor meets. It sets the tone for the rest.</p>
+    <Reveal class="border-t border-border pt-8">
+      <PageNext to="/trust" label="Trust Center" blurb="Where a client goes when they ask." />
     </Reveal>
   </div>
 </template>

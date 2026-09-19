@@ -1,56 +1,59 @@
 <script setup lang="ts">
-const { active, select } = useSite()
+const route = useRoute()
+const isActive = (to: string) => route.path === to
+
+const groups = [
+  {
+    title: 'Modules',
+    items: [
+      { to: '/', label: 'Overview', blurb: '', num: '00', live: false },
+      ...MODULES.map((m, i) => ({ to: m.to, label: m.label, blurb: m.blurb, num: `0${i + 1}`, live: false })),
+    ],
+  },
+  { title: 'Proof', items: PROOF_LINKS.map((p) => ({ ...p, num: '' })) },
+]
 </script>
 
 <template>
   <aside
-    class="sticky top-14 h-[calc(100vh-3.5rem)] flex-col justify-between gap-8 overflow-y-auto border-r border-border py-10 pl-5 pr-6"
+    class="sticky top-14 h-[calc(100vh-3.5rem)] flex-col justify-between gap-6 overflow-y-auto border-r border-border py-10 pl-5 pr-6"
   >
-    <nav aria-label="Modules">
-      <p class="mono-label mb-4 px-3">Modules</p>
-      <ul class="space-y-1">
-        <li>
-          <button
-            type="button"
-            class="group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition-colors duration-300 ease-calm"
-            :class="active === 'home' ? 'bg-accent-bg text-accent' : 'text-muted hover:bg-white hover:text-ink'"
-            :aria-current="active === 'home' ? 'page' : undefined"
-            @click="select('home')"
-          >
-            <span class="font-mono text-[11px]" aria-hidden="true">00</span>
-            <span class="font-medium">Overview</span>
-          </button>
-        </li>
-        <li v-for="(m, i) in MODULES" :key="m.id">
-          <button
-            type="button"
-            class="group flex w-full items-start gap-3 rounded-lg px-3 py-2.5 text-left transition-colors duration-300 ease-calm"
-            :class="active === m.id ? 'bg-accent-bg' : 'hover:bg-white'"
-            :aria-current="active === m.id ? 'page' : undefined"
-            @click="select(m.id)"
-          >
-            <span
-              class="mt-0.5 font-mono text-[11px]"
-              :class="active === m.id ? 'text-accent' : 'text-muted'"
-              aria-hidden="true"
-              >0{{ i + 1 }}</span
+    <div class="space-y-8">
+      <nav v-for="g in groups" :key="g.title" :aria-label="g.title">
+        <p class="mono-label mb-3 px-3">{{ g.title }}</p>
+        <ul class="space-y-1">
+          <li v-for="item in g.items" :key="item.to">
+            <NuxtLink
+              :to="item.to"
+              class="relative flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-300 ease-calm"
+              :class="isActive(item.to) ? 'bg-accent-bg' : 'hover:bg-white'"
+              :aria-current="isActive(item.to) ? 'page' : undefined"
             >
-            <span>
-              <span class="block text-sm font-medium" :class="active === m.id ? 'text-accent' : 'text-ink'">{{
-                m.label
-              }}</span>
-              <span class="block text-xs" :class="active === m.id ? 'text-accent' : 'text-muted'">{{ m.blurb }}</span>
-            </span>
-          </button>
-        </li>
-      </ul>
-    </nav>
+              <span
+                v-if="isActive(item.to)"
+                class="absolute inset-y-2 left-0 w-0.5 rounded-full bg-accent"
+                aria-hidden="true"
+              />
+              <span v-if="item.num" class="mt-0.5 font-mono text-[11px]" :class="isActive(item.to) ? 'text-accent' : 'text-muted'" aria-hidden="true">{{ item.num }}</span>
+              <span v-else class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" :class="item.live ? 'bg-ok' : 'bg-border'" aria-hidden="true" />
+              <span>
+                <span class="block text-sm font-medium" :class="isActive(item.to) ? 'text-accent' : 'text-ink'">{{ item.label }}</span>
+                <span v-if="item.blurb" class="block text-xs" :class="isActive(item.to) ? 'text-accent' : 'text-muted'">{{ item.blurb }}</span>
+              </span>
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-    <div class="rounded-lg border border-border bg-white p-4">
-      <p class="mono-label mb-2">Book of record</p>
-      <p class="text-xs leading-relaxed text-muted">
-        Behind all three: your RoPA, DPIAs, vendors and DPAs, and breach log, kept in one place.
-      </p>
+    <div class="space-y-3">
+      <div class="rounded-lg border border-border bg-white p-4">
+        <p class="mono-label mb-2">Book of record</p>
+        <p class="text-xs leading-relaxed text-muted">
+          Behind all three: your RoPA, DPIAs, vendors and DPAs, and breach log, kept in one place.
+        </p>
+      </div>
+      <BookButton class="w-full" label="Book your setup day" />
     </div>
   </aside>
 </template>

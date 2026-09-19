@@ -11,13 +11,14 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: 'Fraunces', provider: 'google', weights: [400, 500] },
+      { name: 'Fraunces', provider: 'google', weights: [400, 500], styles: ['normal', 'italic'] },
       { name: 'Inter', provider: 'google', weights: [400, 500, 600] },
       { name: 'JetBrains Mono', provider: 'google', weights: [400, 500] },
     ],
   },
 
   app: {
+    pageTransition: { name: 'canvas', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'Sentinel: the front door of DPDP',

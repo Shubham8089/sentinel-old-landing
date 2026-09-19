@@ -1,7 +1,5 @@
 <script setup lang="ts">
 // A sample public trust page. All company details and dates are placeholders.
-const { select } = useSite()
-
 const LANGS = [
   { code: 'en', label: 'English' },
   { code: 'hi', label: 'हिन्दी' },
@@ -96,10 +94,10 @@ const POSTURE = ['Consent notice live', 'Rights portal live', 'Breach process do
           <section aria-labelledby="dpo-h">
             <h3 id="dpo-h" class="font-sans text-sm font-semibold tracking-normal">Data Protection Officer</h3>
             <p class="mt-2 font-mono text-xs text-muted">dpo@acme.example</p>
-            <button type="button" class="btn-quiet -ml-3 mt-2 !py-1.5" @click="select('rights', '#dsar-demo')">
+            <NuxtLink to="/rights#dsar-demo" class="btn-quiet -ml-3 mt-2 !py-1.5">
               Request your data
               <span aria-hidden="true">→</span>
-            </button>
+            </NuxtLink>
           </section>
         </div>
       </div>

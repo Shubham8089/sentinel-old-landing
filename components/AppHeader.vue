@@ -1,16 +1,15 @@
 <script setup lang="ts">
-const { select, goToWaitlist } = useSite()
+const { open } = useCommand()
+const isMac = ref(false)
+onMounted(() => {
+  isMac.value = /Mac|iPhone|iPad/.test(navigator.userAgent)
+})
 </script>
 
 <template>
   <header class="sticky top-0 z-30 border-b border-border bg-canvas">
     <div class="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-4 px-5 sm:px-8">
-      <button
-        type="button"
-        class="flex items-center gap-3 rounded-md"
-        aria-label="Sentinel, back to overview"
-        @click="select('home')"
-      >
+      <NuxtLink to="/" class="flex items-center gap-3 rounded-md" aria-label="Sentinel, home">
         <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
           <rect width="32" height="32" rx="7" fill="var(--accent)" />
           <path d="M10 25V14a6 6 0 0 1 12 0v11" fill="none" stroke="var(--canvas)" stroke-width="2.4" stroke-linecap="round" />
@@ -18,12 +17,24 @@ const { select, goToWaitlist } = useSite()
         </svg>
         <span class="font-serif text-xl font-medium tracking-tight">Sentinel</span>
         <span class="hidden font-mono text-xs text-muted sm:inline">the front door of DPDP</span>
-      </button>
+      </NuxtLink>
 
-      <button type="button" class="btn-primary !py-2" @click="goToWaitlist">
-        <span class="hidden sm:inline">Get your Trust Center</span>
-        <span class="sm:hidden">Join waitlist</span>
-      </button>
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          class="hidden items-center gap-3 rounded-lg border border-border bg-white px-3 py-1.5 text-sm text-muted transition-colors duration-200 hover:text-ink md:inline-flex"
+          aria-label="Open quick navigation"
+          @click="open"
+        >
+          Jump to
+          <kbd class="rounded border border-border px-1.5 font-mono text-[11px]">{{ isMac ? '⌘' : 'Ctrl' }} K</kbd>
+        </button>
+        <a :href="bookHref()" class="btn-primary !py-2">
+          <span class="hidden sm:inline">Book your setup day</span>
+          <span class="sm:hidden">Book setup day</span>
+          <span class="sr-only"> (opens your email app)</span>
+        </a>
+      </div>
     </div>
   </header>
 </template>
