@@ -6,10 +6,12 @@ interface Item {
   hint: string
   to?: string
   href?: string
+  action?: () => void
 }
 
 const { isOpen, open, close } = useCommand()
 const router = useRouter()
+const { open: openWaitlist } = useWaitlist()
 
 const q = ref('')
 const idx = ref(0)
@@ -21,8 +23,8 @@ const ITEMS: Item[] = [
   ...MODULES.map((m) => ({ id: m.id, label: m.label, hint: 'Module', to: m.to })),
   { id: 'demo', label: 'Watch a request move through', hint: 'Demo', to: '/rights#dsar-demo' },
   { id: 'covered', label: 'What’s covered', hint: 'Proof', to: '/covered' },
-  { id: 'trust-page', label: 'Our trust page', hint: 'Proof', to: '/our-trust-page' },
-  { id: 'book', label: 'Book your setup day', hint: 'Opens email', href: bookHref() },
+  { id: 'trust-page', label: 'Our trust center', hint: 'Live', href: TRUST_CENTER_URL },
+  { id: 'waitlist', label: 'Join the waitlist', hint: 'Action', action: openWaitlist },
 ]
 
 const results = computed(() => {
@@ -46,7 +48,8 @@ watch(q, () => (idx.value = 0))
 function run(item: Item) {
   close()
   if (item.to) router.push(item.to)
-  else if (item.href) window.location.href = item.href
+  else if (item.href) window.open(item.href, '_blank', 'noopener')
+  else item.action?.()
 }
 
 function onKey(e: KeyboardEvent) {

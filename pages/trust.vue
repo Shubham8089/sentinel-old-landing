@@ -29,7 +29,22 @@ const points = [
     />
 
     <Reveal>
-      <TrustCenterMock />
+      <figure class="m-0">
+        <figcaption class="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <span class="mono-label">Live · Sentinel’s own trust center</span>
+          <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet !px-3 !py-1.5">
+            Open in a new tab <span aria-hidden="true">↗</span>
+          </a>
+        </figcaption>
+        <div class="overflow-hidden rounded-2xl border border-border bg-white shadow-hard">
+          <iframe
+            :src="TRUST_CENTER_URL"
+            title="Sentinel trust center"
+            loading="lazy"
+            class="block h-[42rem] w-full border-0"
+          />
+        </div>
+      </figure>
     </Reveal>
 
     <section aria-labelledby="record-h" class="space-y-6">
@@ -49,7 +64,7 @@ const points = [
     </section>
 
     <Reveal class="space-y-4 border-t border-border pt-8">
-      <NuxtLink to="/our-trust-page" class="btn-quiet -ml-3">See Sentinel’s own trust page, live <span aria-hidden="true">→</span></NuxtLink>
+      <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet -ml-3">See Sentinel’s own trust center, live <span aria-hidden="true">↗</span></a>
       <PageNext to="/rights" label="Rights" blurb="What happens when a customer writes in." />
     </Reveal>
   </div>

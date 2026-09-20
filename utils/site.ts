@@ -1,31 +1,5 @@
-// Single source of truth for site-wide content that changes over time.
-export const SITE = {
-  name: 'Sentinel',
-  // Setup-day requests go here until a real booking link exists.
-  bookingEmail: 'bhosalepatil@hotmail.com',
-  // TODO: paste a Cal.com / Calendly URL here and every "Book your setup day" button switches to it.
-  bookingUrl: '',
-  launched: '19 Sep 2026',
-}
-
-export const bookHref = () => {
-  if (SITE.bookingUrl) return SITE.bookingUrl
-  const body = [
-    'Hi,',
-    '',
-    "I'd like to book a Sentinel setup day.",
-    '',
-    'Company:',
-    'Website:',
-    'Team size:',
-    'What prompted this (a client questionnaire, an audit, something else):',
-    '',
-  ].join('\r\n')
-  return `mailto:${SITE.bookingEmail}?subject=${encodeURIComponent('Sentinel setup day')}&body=${encodeURIComponent(body)}`
-}
-
-export const questionHref = () =>
-  `mailto:${SITE.bookingEmail}?subject=${encodeURIComponent('Question about the Sentinel trust page')}`
+// Single source of truth for site-wide content.
+export const TRUST_CENTER_URL = 'https://dpdp-prod.vercel.app/portal/landing-page/trust'
 
 export interface SiteModule {
   id: 'consent' | 'trust' | 'rights'
@@ -59,7 +33,3 @@ export const MODULES: SiteModule[] = [
   },
 ]
 
-export const PROOF_LINKS = [
-  { to: '/covered', label: 'What’s covered', blurb: 'Handled, supported, yours', live: false },
-  { to: '/our-trust-page', label: 'Our trust page', blurb: 'Live and versioned', live: true },
-]

@@ -4,12 +4,12 @@ defineProps<{ step: 'consent' | 'trust' | 'rights' }>()
 </script>
 
 <template>
-  <div class="h-full w-full rounded-xl border border-border bg-[#F3F0E8] p-4 sm:p-6" role="img" :aria-label="`Illustration of ${step}, using sample data`">
+  <div class="h-full w-full rounded-xl border border-border bg-[#E6EEFC] p-4 sm:p-6" role="img" :aria-label="`Illustration of ${step}, using sample data`">
     <div class="flex h-full flex-col justify-center gap-3" aria-hidden="true">
       <!-- consent -->
       <template v-if="step === 'consent'">
         <div class="card p-4">
-          <p class="font-serif text-base">We use cookies, and we ask first.</p>
+          <p class="font-bold tracking-tight text-base">We use cookies, and we ask first.</p>
           <p class="mt-1 text-xs text-muted">Analytics and marketing stay off until you say yes.</p>
           <div class="mt-3 flex gap-2">
             <span class="rounded-lg border border-border px-3 py-1.5 text-xs font-medium">Reject non-essential</span>
@@ -30,7 +30,7 @@ defineProps<{ step: 'consent' | 'trust' | 'rights' }>()
         <div class="card overflow-hidden">
           <div class="flex items-center justify-between border-b border-border px-4 py-3">
             <div>
-              <p class="font-serif text-base leading-tight">Acme Retail Pvt Ltd</p>
+              <p class="font-bold tracking-tight text-base leading-tight">Acme Retail Pvt Ltd</p>
               <p class="font-mono text-[11px] text-muted">trust.acme.example</p>
             </div>
             <span class="inline-flex items-center gap-1.5 rounded-full bg-accent-bg px-2.5 py-1 text-[11px] font-medium text-accent"><span class="h-1.5 w-1.5 rounded-full bg-ok" />No open incidents</span>

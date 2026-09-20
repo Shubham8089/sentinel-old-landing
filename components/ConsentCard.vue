@@ -45,7 +45,7 @@ const CATS = [
 
     <!-- Banner -->
     <div v-else key="banner" class="card p-5" role="region" aria-label="Cookie and consent banner">
-      <h3 class="font-serif text-lg leading-snug">We use cookies, and we ask first.</h3>
+      <h3 class="font-bold tracking-tight text-lg leading-snug">We use cookies, and we ask first.</h3>
       <p class="mt-1.5 text-sm leading-relaxed text-muted">
         Essential cookies keep the site working. Analytics and marketing stay off until you say yes.
         <span class="whitespace-nowrap">Privacy notice {{ NOTICE_VERSION }}.</span>

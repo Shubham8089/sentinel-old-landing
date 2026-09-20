@@ -11,8 +11,7 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: 'Fraunces', provider: 'google', weights: [400, 500], styles: ['normal', 'italic'] },
-      { name: 'Inter', provider: 'google', weights: [400, 500, 600] },
+      { name: 'Plus Jakarta Sans', provider: 'google', weights: [400, 500, 600, 700, 800] },
       { name: 'JetBrains Mono', provider: 'google', weights: [400, 500] },
     ],
   },
@@ -29,7 +28,7 @@ export default defineNuxtConfig({
           content:
             'Pass the DPDP question every client asks. Sentinel is the consent, trust and rights layer that lives on your front door, set up in a day and kept current.',
         },
-        { name: 'theme-color', content: '#FAF8F3' },
+        { name: 'theme-color', content: '#F4F7FE' },
         { property: 'og:title', content: 'Sentinel: the front door of DPDP' },
         {
           property: 'og:description',
@@ -38,6 +37,13 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
       ],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      script: [
+        {
+          src: 'https://dpdp-prod.vercel.app/sdk/v1/s.js',
+          'data-org': 'd94c503e-f36d-48bb-b34b-8fc1413cdccb',
+          async: true,
+        },
+      ],
     },
   },
 })

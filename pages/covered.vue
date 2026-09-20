@@ -39,7 +39,7 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
   {
     key: 'yours',
     title: 'Stays with you',
-    blurb: 'Nothing a tool can do for you. We flag each one on your setup day.',
+    blurb: 'Nothing a tool can do for you. We flag each one when you are set up.',
     dot: 'bg-warn',
     rows: [
       { title: 'Security safeguards in your systems', ref: 'Section 8(5)', body: 'Reasonable safeguards where the data lives. We can show you are doing it. We cannot do it for you.', where: 'Your team' },
@@ -77,10 +77,10 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
         <Reveal v-for="(r, i) in g.rows" :key="r.title" as="li" :delay="i * 60" class="grid gap-x-8 gap-y-2 px-5 py-4 sm:grid-cols-[minmax(0,5fr)_minmax(0,6fr)_7rem]">
           <p class="text-sm font-medium">
             {{ r.title }}
-            <span v-if="r.ref" class="ml-2 font-mono text-[11px] font-normal text-muted">{{ r.ref }}</span>
+            <span v-if="r.ref" class="ml-2 text-[11px] font-normal text-muted">{{ r.ref }}</span>
           </p>
           <p class="text-sm leading-relaxed text-muted">{{ r.body }}</p>
-          <p class="font-mono text-xs sm:text-right">{{ r.where }}</p>
+          <p class="text-xs sm:text-right">{{ r.where }}</p>
         </Reveal>
       </ul>
     </section>
@@ -94,8 +94,8 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
     </Reveal>
 
     <Reveal class="flex flex-wrap items-center justify-between gap-6 border-t border-border pt-8">
-      <PageNext to="/our-trust-page" label="Our trust page" blurb="We publish what we would ask you to publish." class="w-full sm:w-auto sm:min-w-[22rem]" />
-      <BookButton large />
+      <PageNext to="/trust" label="Trust Center" blurb="Where a client goes when they ask." class="w-full sm:w-auto sm:min-w-[22rem]" />
+      <WaitlistButton large />
     </Reveal>
   </div>
 </template>

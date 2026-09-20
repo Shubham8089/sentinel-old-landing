@@ -19,14 +19,14 @@ export default <Partial<Config>>{
         warn: 'var(--warn)',
       },
       fontFamily: {
-        serif: ['Fraunces', 'Georgia', 'Cambria', 'serif'],
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       // Flat, hard-edged offsets. No blur, no glow.
       boxShadow: {
         hard: '8px 8px 0 var(--accent-bg)',
         'hard-sm': '3px 3px 0 var(--border)',
+        pop: '0 4px 0 var(--accent-hi)',
       },
       transitionTimingFunction: {
         calm: 'cubic-bezier(0.22, 0.61, 0.36, 1)',

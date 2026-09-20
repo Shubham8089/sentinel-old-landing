@@ -10,7 +10,6 @@ const groups = [
       ...MODULES.map((m, i) => ({ to: m.to, label: m.label, blurb: m.blurb, num: `0${i + 1}`, live: false })),
     ],
   },
-  { title: 'Proof', items: PROOF_LINKS.map((p) => ({ ...p, num: '' })) },
 ]
 </script>
 
@@ -46,14 +45,8 @@ const groups = [
       </nav>
     </div>
 
-    <div class="space-y-3">
-      <div class="rounded-lg border border-border bg-white p-4">
-        <p class="mono-label mb-2">Book of record</p>
-        <p class="text-xs leading-relaxed text-muted">
-          Behind all three: your RoPA, DPIAs, vendors and DPAs, and breach log, kept in one place.
-        </p>
-      </div>
-      <BookButton class="w-full" label="Book your setup day" />
+    <div>
+      <WaitlistButton class="w-full" />
     </div>
   </aside>
 </template>

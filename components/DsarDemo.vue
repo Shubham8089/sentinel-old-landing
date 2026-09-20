@@ -96,7 +96,7 @@ async function submit() {
       <!-- What the person sees -->
       <section class="card p-5" aria-labelledby="portal-h">
         <p class="mono-label mb-3">What they see · rights portal</p>
-        <h3 id="portal-h" class="font-serif text-xl">Submit a request</h3>
+        <h3 id="portal-h" class="font-bold tracking-tight text-xl">Submit a request</h3>
         <p class="mt-1 text-sm text-muted">Tell us who you are and what you need. We take it from there.</p>
 
         <form class="mt-5 space-y-4" novalidate @submit.prevent="submit">
@@ -147,7 +147,7 @@ async function submit() {
         <div class="flex items-start justify-between gap-3">
           <div>
             <p class="mono-label mb-3">What your team sees · admin queue</p>
-            <h3 id="queue-h" class="font-serif text-xl">Open requests</h3>
+            <h3 id="queue-h" class="font-bold tracking-tight text-xl">Open requests</h3>
           </div>
           <span class="rounded-full border border-border px-2.5 py-1 font-mono text-xs text-muted">{{ openCount }} open · sample data</span>
         </div>

@@ -48,7 +48,7 @@ const cards = [
 
         <div class="p-4 sm:p-5">
           <div class="flex items-baseline justify-between gap-3">
-            <p class="font-serif text-xl">Your front door</p>
+            <p class="font-bold tracking-tight text-xl">Your front door</p>
             <p class="inline-flex items-center gap-2 text-xs text-ok">
               <span class="h-1.5 w-1.5 rounded-full bg-ok" />
               All three live

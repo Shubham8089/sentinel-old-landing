@@ -15,8 +15,8 @@ onMounted(() => {
           <path d="M10 25V14a6 6 0 0 1 12 0v11" fill="none" stroke="var(--canvas)" stroke-width="2.4" stroke-linecap="round" />
           <circle cx="19" cy="20" r="1.4" fill="var(--canvas)" />
         </svg>
-        <span class="font-serif text-xl font-medium tracking-tight">Sentinel</span>
-        <span class="hidden font-mono text-xs text-muted sm:inline">the front door of DPDP</span>
+        <span class="text-xl font-extrabold tracking-tight">Sentinel</span>
+        <span class="hidden text-xs text-muted sm:inline">the front door of DPDP</span>
       </NuxtLink>
 
       <div class="flex items-center gap-2">
@@ -27,13 +27,9 @@ onMounted(() => {
           @click="open"
         >
           Jump to
-          <kbd class="rounded border border-border px-1.5 font-mono text-[11px]">{{ isMac ? '⌘' : 'Ctrl' }} K</kbd>
+          <kbd class="rounded border border-border px-1.5 text-[11px]">{{ isMac ? '⌘' : 'Ctrl' }} K</kbd>
         </button>
-        <a :href="bookHref()" class="btn-primary !py-2">
-          <span class="hidden sm:inline">Book your setup day</span>
-          <span class="sm:hidden">Book setup day</span>
-          <span class="sr-only"> (opens your email app)</span>
-        </a>
+        <WaitlistButton class="!py-2" />
       </div>
     </div>
   </header>

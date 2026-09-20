@@ -5,7 +5,6 @@ const route = useRoute()
 const items = [
   { to: '/', label: 'Overview' },
   ...MODULES.map((m) => ({ to: m.to, label: m.label })),
-  ...PROOF_LINKS.map((p) => ({ to: p.to, label: p.label })),
 ]
 </script>
 

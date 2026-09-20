@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --canvas: #faf8f3;
-  --ink: #17201c;
-  --muted: #6b7269;
-  --border: #e4e0d8;
-  --accent: #0f5d4c;
-  --accent-hi: #0b4a3d;
-  --accent-bg: #e7f0ec;
-  /* semantic: inside mock UI only */
-  --ok: #3b6d11;
-  --warn: #ba7517;
+  --canvas: #f4f7fe;
+  --ink: #0a1633;
+  --muted: #52607d;
+  --border: #d9e2f4;
+  --accent: #2563eb;
+  --accent-hi: #1d4ed8;
+  --accent-bg: #e3ecff;
+  /* semantic: inside mock UI only. Blue family, no green. */
+  --ok: #0369a1;
+  --warn: #d97706;
 
   --ease-calm: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -21,7 +21,7 @@
   html {
     background: var(--canvas);
     color: var(--ink);
-    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -41,18 +41,17 @@
   h1,
   h2,
   h3 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.01em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-200 ease-calm disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-200 ease-calm disabled:cursor-not-allowed disabled:opacity-60;
   }
   .btn-primary {
-    @apply btn bg-accent text-white hover:bg-accent-hi;
+    @apply btn bg-accent text-white shadow-pop hover:-translate-y-0.5 hover:bg-accent-hi active:translate-y-0.5 active:shadow-none;
   }
   .btn-outline {
     @apply btn border bg-transparent text-ink hover:bg-white;
@@ -68,10 +67,10 @@
     @apply inline-flex items-center gap-2 rounded-full bg-accent-bg px-3 py-1 text-xs font-medium text-accent;
   }
   .mono-label {
-    @apply font-mono text-[11px] uppercase tracking-[0.08em] text-muted;
+    @apply text-[11px] font-bold uppercase tracking-[0.1em] text-accent;
   }
   .card {
-    @apply rounded-xl border border-border bg-white;
+    @apply rounded-2xl border border-border bg-white;
   }
   .prose-calm {
     @apply text-base leading-relaxed text-ink;
@@ -94,13 +93,15 @@
   transform: translateY(-6px);
 }
 
-/* Editorial emphasis inside serif headlines */
+/* Emphasis inside headlines: blue, with a marker underline */
 h1 em,
 h2 em,
+h3 em,
 .accent-em {
-  font-style: italic;
+  font-style: normal;
   color: var(--accent);
-  font-weight: 400;
+  background: linear-gradient(transparent 68%, #bcd0ff 68%);
+  padding: 0 0.08em;
 }
 
 /* Floating banner + command palette */
