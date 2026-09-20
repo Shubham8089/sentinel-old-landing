@@ -31,7 +31,7 @@ const promises = ['Set up in a day', 'Kept current', 'Evidence on demand']
 
       <div class="mt-10 flex flex-wrap items-center gap-3">
         <WaitlistButton large />
-        <NuxtLink to="/rights#dsar-demo" class="btn-outline !px-6 !py-3.5 !text-base">Watch it work</NuxtLink>
+        <NuxtLink to="/rights#dsar-demo" class="btn-outline !h-14 !px-7 !text-sm">Watch it work</NuxtLink>
       </div>
 
       <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2">

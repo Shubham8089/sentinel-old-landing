@@ -15,7 +15,7 @@ onMounted(() => {
           <path d="M10 25V14a6 6 0 0 1 12 0v11" fill="none" stroke="var(--canvas)" stroke-width="2.4" stroke-linecap="round" />
           <circle cx="19" cy="20" r="1.4" fill="var(--canvas)" />
         </svg>
-        <span class="text-xl font-extrabold tracking-tight">Sentinel</span>
+        <span class="text-xl font-semibold tracking-tight">Sentinel</span>
         <span class="hidden text-xs text-muted sm:inline">the front door of DPDP</span>
       </NuxtLink>
 
@@ -29,7 +29,7 @@ onMounted(() => {
           Jump to
           <kbd class="rounded border border-border px-1.5 text-[11px]">{{ isMac ? '⌘' : 'Ctrl' }} K</kbd>
         </button>
-        <WaitlistButton class="!py-2" />
+        <WaitlistButton />
       </div>
     </div>
   </header>

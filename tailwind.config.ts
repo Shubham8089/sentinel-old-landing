@@ -4,6 +4,18 @@ import type { Config } from 'tailwindcss'
 // live in one place and are usable from both Tailwind and plain CSS.
 export default <Partial<Config>>{
   theme: {
+    // Sharper corners everywhere; rounded-full stays for chips and dots.
+    borderRadius: {
+      none: '0',
+      sm: '2px',
+      DEFAULT: '3px',
+      md: '4px',
+      lg: '4px',
+      xl: '6px',
+      '2xl': '8px',
+      '3xl': '10px',
+      full: '9999px',
+    },
     extend: {
       colors: {
         canvas: 'var(--canvas)',
@@ -19,14 +31,13 @@ export default <Partial<Config>>{
         warn: 'var(--warn)',
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        sans: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['DM Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       // Flat, hard-edged offsets. No blur, no glow.
       boxShadow: {
         hard: '8px 8px 0 var(--accent-bg)',
         'hard-sm': '3px 3px 0 var(--border)',
-        pop: '0 4px 0 var(--accent-hi)',
       },
       transitionTimingFunction: {
         calm: 'cubic-bezier(0.22, 0.61, 0.36, 1)',

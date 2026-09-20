@@ -12,7 +12,7 @@
       </span>
     </figcaption>
 
-    <div class="relative min-h-[31rem] overflow-hidden rounded-xl border border-border bg-[#E6EEFC] sm:min-h-[27rem]">
+    <div class="relative min-h-[31rem] overflow-hidden rounded-xl border border-border bg-[#EEF2EF] sm:min-h-[27rem]">
       <div class="space-y-3 p-5" aria-hidden="true">
         <div class="flex items-center justify-between">
           <div class="h-3 w-24 rounded bg-border" />

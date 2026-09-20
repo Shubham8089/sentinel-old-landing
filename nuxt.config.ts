@@ -11,7 +11,8 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: 'Plus Jakarta Sans', provider: 'google', weights: [400, 500, 600, 700, 800] },
+      { name: 'DM Sans', provider: 'google', weights: [400, 500, 600, 700] },
+      { name: 'DM Mono', provider: 'google', weights: [400, 500] },
       { name: 'JetBrains Mono', provider: 'google', weights: [400, 500] },
     ],
   },
@@ -28,7 +29,7 @@ export default defineNuxtConfig({
           content:
             'Pass the DPDP question every client asks. Sentinel is the consent, trust and rights layer that lives on your front door, set up in a day and kept current.',
         },
-        { name: 'theme-color', content: '#F4F7FE' },
+        { name: 'theme-color', content: '#F7F8F5' },
         { property: 'og:title', content: 'Sentinel: the front door of DPDP' },
         {
           property: 'og:description',

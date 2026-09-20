@@ -4,7 +4,7 @@ defineProps<{ step: 'consent' | 'trust' | 'rights' }>()
 </script>
 
 <template>
-  <div class="h-full w-full rounded-xl border border-border bg-[#E6EEFC] p-4 sm:p-6" role="img" :aria-label="`Illustration of ${step}, using sample data`">
+  <div class="h-full w-full rounded-xl border border-border bg-[#EEF2EF] p-4 sm:p-6" role="img" :aria-label="`Illustration of ${step}, using sample data`">
     <div class="flex h-full flex-col justify-center gap-3" aria-hidden="true">
       <!-- consent -->
       <template v-if="step === 'consent'">
