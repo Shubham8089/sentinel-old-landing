@@ -6,8 +6,8 @@ const groups = [
   {
     title: 'Modules',
     items: [
-      { to: '/', label: 'Overview', blurb: '', num: '00', live: false },
-      ...MODULES.map((m, i) => ({ to: m.to, label: m.label, blurb: m.blurb, num: `0${i + 1}`, live: false })),
+      { to: '/', label: 'Overview', blurb: '', live: false },
+      ...MODULES.map((m) => ({ to: m.to, label: m.label, blurb: m.blurb, live: false })),
     ],
   },
 ]
@@ -19,7 +19,6 @@ const groups = [
   >
     <div class="space-y-8">
       <nav v-for="g in groups" :key="g.title" :aria-label="g.title">
-        <p class="mono-label mb-3 px-3">{{ g.title }}</p>
         <ul class="space-y-1">
           <li v-for="item in g.items" :key="item.to">
             <NuxtLink
@@ -33,10 +32,8 @@ const groups = [
                 class="absolute inset-y-2 left-0 w-0.5 rounded-full bg-accent"
                 aria-hidden="true"
               />
-              <span v-if="item.num" class="mt-0.5 font-mono text-[11px]" :class="isActive(item.to) ? 'text-accent' : 'text-muted'" aria-hidden="true">{{ item.num }}</span>
-              <span v-else class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" :class="item.live ? 'bg-ok' : 'bg-border'" aria-hidden="true" />
               <span>
-                <span class="block text-sm font-medium" :class="isActive(item.to) ? 'text-accent' : 'text-ink'">{{ item.label }}</span>
+                <span class="block text-sm" :class="isActive(item.to) ? 'font-medium text-accent' : 'text-ink'">{{ item.label }}</span>
                 <span v-if="item.blurb" class="block text-xs" :class="isActive(item.to) ? 'text-accent' : 'text-muted'">{{ item.blurb }}</span>
               </span>
             </NuxtLink>
@@ -45,8 +42,5 @@ const groups = [
       </nav>
     </div>
 
-    <div>
-      <WaitlistButton class="w-full" />
-    </div>
   </aside>
 </template>

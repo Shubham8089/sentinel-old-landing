@@ -19,6 +19,5 @@ const { open } = useWaitlist()
     @click="open"
   >
     {{ label }}
-    <span class="inline-block transition-transform duration-300 ease-calm group-hover:translate-x-1" aria-hidden="true">→</span>
   </button>
 </template>

@@ -27,7 +27,7 @@ const label = (c: string) => (c === 'accepted' ? 'accepted all' : c === 'rejecte
 <template>
   <div class="space-y-14">
     <ModuleHead
-      eyebrow="01 · Consent"
+      eyebrow="Consent"
       outcome="Every visitor gets a clear choice, and you keep a receipt for each one."
       :points="points"
     />

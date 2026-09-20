@@ -23,7 +23,7 @@ const points = [
 <template>
   <div class="space-y-14">
     <ModuleHead
-      eyebrow="03 · Rights"
+      eyebrow="Rights"
       outcome="Every data request gets a front door, a clock and an owner."
       :points="points"
     />

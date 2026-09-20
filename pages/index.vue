@@ -14,21 +14,22 @@ const promises = ['Set up in a day', 'Kept current', 'Evidence on demand']
   <div class="space-y-24 lg:space-y-32">
     <!-- Hero -->
     <section>
-      <p class="chip mb-6">
+      <p class="chip mb-8">
         <span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
         Full DPDP obligations apply from May 2027
       </p>
 
-      <h1 class="max-w-[19ch] text-[clamp(2.6rem,5.8vw,4.8rem)] leading-[1] sm:max-w-4xl">
-        Pass the DPDP question every client asks. And <em>stay that way.</em>
+      <h1 class="max-w-4xl text-[clamp(2.6rem,5.4vw,4.4rem)] leading-[1.04]">
+        <span class="block text-balance">Pass the DPDP question every client asks.</span>
+        <span class="block">And <em>stay that way.</em></span>
       </h1>
 
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted">
         The consent, trust, and rights layer that lives on your front door: set up in a day, kept current, evidence on
         demand.
       </p>
 
-      <div class="mt-8 flex flex-wrap items-center gap-3">
+      <div class="mt-10 flex flex-wrap items-center gap-3">
         <WaitlistButton large />
         <NuxtLink to="/rights#dsar-demo" class="btn-outline !px-6 !py-3.5 !text-base">Watch it work</NuxtLink>
       </div>

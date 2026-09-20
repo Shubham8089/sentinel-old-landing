@@ -22,7 +22,7 @@ onMounted(() => {
       <div class="flex items-center gap-2">
         <button
           type="button"
-          class="hidden items-center gap-3 rounded-lg border border-border bg-white px-3 py-1.5 text-sm text-muted transition-colors duration-200 hover:text-ink md:inline-flex"
+          class="hidden items-center gap-3 rounded-lg px-3 py-1.5 text-sm text-muted/80 transition-colors duration-200 hover:text-ink md:inline-flex"
           aria-label="Open quick navigation"
           @click="open"
         >

@@ -23,7 +23,7 @@ const points = [
 <template>
   <div class="space-y-14">
     <ModuleHead
-      eyebrow="02 · Trust Center"
+      eyebrow="Trust Center"
       outcome="A public page that answers the client questionnaire before it is sent."
       :points="points"
     />
@@ -33,7 +33,7 @@ const points = [
         <figcaption class="mb-3 flex flex-wrap items-center justify-between gap-3">
           <span class="mono-label">Live · Sentinel’s own trust center</span>
           <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet !px-3 !py-1.5">
-            Open in a new tab <span aria-hidden="true">↗</span>
+            Open in a new tab
           </a>
         </figcaption>
         <div class="overflow-hidden rounded-2xl border border-border bg-white shadow-hard">
@@ -64,7 +64,7 @@ const points = [
     </section>
 
     <Reveal class="space-y-4 border-t border-border pt-8">
-      <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet -ml-3">See Sentinel’s own trust center, live <span aria-hidden="true">↗</span></a>
+      <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet -ml-3">See Sentinel’s own trust center, live</a>
       <PageNext to="/rights" label="Rights" blurb="What happens when a customer writes in." />
     </Reveal>
   </div>

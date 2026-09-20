@@ -93,15 +93,18 @@
   transform: translateY(-6px);
 }
 
-/* Emphasis inside headlines: blue, with a marker underline */
+/* Emphasis inside headlines: accent colour only */
 h1 em,
 h2 em,
 h3 em,
 .accent-em {
   font-style: normal;
   color: var(--accent);
-  background: linear-gradient(transparent 68%, #bcd0ff 68%);
-  padding: 0 0.08em;
+}
+
+/* The SDK's "unable to load" state is never shown to visitors. */
+[data-sentinel]:has(.sentinel-embed-error) {
+  display: none;
 }
 
 /* Floating banner + command palette */

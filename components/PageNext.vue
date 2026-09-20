@@ -12,6 +12,5 @@ defineProps<{ to: string; label: string; blurb?: string }>()
       <span class="mt-1 block font-bold tracking-tight text-2xl">{{ label }}</span>
       <span v-if="blurb" class="mt-1 block text-sm text-muted">{{ blurb }}</span>
     </span>
-    <span class="text-2xl text-accent transition-transform duration-300 ease-calm group-hover:translate-x-1" aria-hidden="true">→</span>
   </NuxtLink>
 </template>

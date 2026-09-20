@@ -62,7 +62,7 @@ onBeforeUnmount(() => observer?.disconnect())
         <p class="mono-label">{{ s.num }} · {{ s.kicker }}</p>
         <h3 class="mt-3 text-3xl leading-[1.1] sm:text-4xl">{{ s.title }}</h3>
         <p class="mt-4 max-w-md text-base leading-relaxed text-muted">{{ s.body }}</p>
-        <NuxtLink :to="s.to" class="btn-quiet -ml-3 mt-4 self-start">{{ s.cta }} <span aria-hidden="true">→</span></NuxtLink>
+        <NuxtLink :to="s.to" class="btn-quiet -ml-3 mt-4 self-start">{{ s.cta }}</NuxtLink>
         <StoryVisual :step="s.key" class="mt-6 min-h-[16rem] lg:hidden" />
       </li>
     </ol>
