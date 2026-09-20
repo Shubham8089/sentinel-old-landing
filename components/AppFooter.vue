@@ -10,12 +10,6 @@
       </div>
     </section>
 
-    <div class="border-b border-border bg-white">
-      <div class="mx-auto max-w-[1280px] px-5 py-10 sm:px-8 lg:px-12">
-        <div data-sentinel="policy" data-slug="privacy-policy"></div>
-      </div>
-    </div>
-
     <div class="bg-white">
       <div class="mx-auto flex max-w-[1280px] flex-col gap-4 px-5 pb-12 pt-6 text-sm text-muted sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12">
         <p>© 2026 Sentinel · the front door of DPDP</p>

@@ -11,7 +11,6 @@ useNuxtApp().hook('page:transition:finish', () => {
   <div class="flex min-h-screen flex-col">
     <NuxtRouteAnnouncer />
     <a href="#main" class="skip-link">Skip to content</a>
-    <div data-sentinel="notice"></div>
     <AppHeader />
     <MobileNav class="lg:hidden" />
 
