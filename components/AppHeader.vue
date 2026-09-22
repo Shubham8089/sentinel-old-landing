@@ -9,14 +9,9 @@ onMounted(() => {
 <template>
   <header class="sticky top-0 z-30 border-b border-border bg-canvas">
     <div class="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-4 px-5 sm:px-8">
-      <NuxtLink to="/" class="flex items-center gap-3 rounded-md" aria-label="Sentinel, home">
-        <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="7" fill="var(--accent)" />
-          <path d="M10 25V14a6 6 0 0 1 12 0v11" fill="none" stroke="var(--canvas)" stroke-width="2.4" stroke-linecap="round" />
-          <circle cx="19" cy="20" r="1.4" fill="var(--canvas)" />
-        </svg>
-        <span class="text-xl font-semibold tracking-tight">Sentinel</span>
-        <span class="hidden text-xs text-muted sm:inline">the front door of DPDP</span>
+      <NuxtLink to="/" class="flex items-center gap-2.5 rounded-md" aria-label="pactbase, home">
+        <img src="/favicon.svg" alt="" width="24" height="24" class="rounded-[6px]" aria-hidden="true" />
+        <img src="/pactbase-wordmark.svg" alt="pactbase" class="h-4 w-auto" />
       </NuxtLink>
 
       <div class="flex items-center gap-2">

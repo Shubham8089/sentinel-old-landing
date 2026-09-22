@@ -15,14 +15,14 @@ export const MODULES: SiteModule[] = [
     to: '/consent',
     label: 'Consent',
     blurb: 'Banner, preferences, notice',
-    outcome: 'A clear choice for every visitor, and a receipt for each one.',
+    outcome: 'A clear yes or no for every visitor, and a receipt for each one.',
   },
   {
     id: 'trust',
     to: '/trust',
     label: 'Trust Center',
     blurb: 'Policies, status, contact',
-    outcome: 'A public page that answers the questionnaire before it is sent.',
+    outcome: "A public page that shows customers how their data's handled.",
   },
   {
     id: 'rights',
