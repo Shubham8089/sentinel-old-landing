@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'pactbase — the trust layer between you and your customers',
+  title: 'pactbase | proofs, not promises.',
   description:
-    'Consent, a trust center, and data requests — handled in one place, on your front door. Set up in a day.',
-  ogTitle: 'pactbase — the trust layer between you and your customers',
+    'Consent, a trust center, and data requests. Handled in one place, on your front door. Set up in a day.',
+  ogTitle: 'pactbase | proofs, not promises.',
   ogDescription: 'The consent, trust and rights layer that lives between your business and your customers.',
 })
 
@@ -19,23 +19,23 @@ const promises = ['Set up in a day', 'Kept current', 'Real, not a PDF']
       </h1>
 
       <p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted">
-        Consent, a trust center, and data requests — handled in one place, on your front door. Set up in a day.
+        Consent, a trust center, and data requests. Handled in one place, on your front door. Set up in a day.
       </p>
 
       <div class="mt-10 flex flex-wrap items-center gap-3">
-        <WaitlistButton large label="Get your Trust Center" />
+        <TryNowButton large />
         <a href="#how-h" class="btn-outline !h-14 !px-7 !text-sm">See how it works</a>
       </div>
 
       <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-        <li v-for="p in promises" :key="p" class="flex items-center gap-2 text-xs text-muted">
-          <svg width="12" height="12" viewBox="0 0 12 12" class="text-blue" aria-hidden="true"><path d="M2 6.5l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <li v-for="(p, i) in promises" :key="p" class="flex items-center gap-2 text-xs text-muted">
+          <svg width="12" height="12" viewBox="0 0 12 12" :class="i === promises.length - 1 ? 'text-coral' : 'text-blue'" aria-hidden="true"><path d="M2 6.5l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
           {{ p }}
         </li>
       </ul>
 
       <Reveal class="mt-16 pb-8">
-        <HeroScene />
+        <ProductWindow />
       </Reveal>
     </section>
 

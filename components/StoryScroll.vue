@@ -57,7 +57,7 @@ onBeforeUnmount(() => observer?.disconnect())
         ref="els"
         :data-i="i"
         class="flex flex-col justify-center transition-opacity duration-500 ease-calm lg:min-h-[68vh]"
-        :class="i === active ? 'lg:opacity-100' : 'lg:opacity-40'"
+        :class="i === active ? 'lg:opacity-100' : 'lg:opacity-70'"
       >
         <p class="mono-label">{{ s.num }} · {{ s.kicker }}</p>
         <h3 class="mt-3 text-3xl leading-[1.1] sm:text-4xl">{{ s.title }}</h3>

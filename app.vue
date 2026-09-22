@@ -23,6 +23,5 @@ useNuxtApp().hook('page:transition:finish', () => {
 
     <AppFooter />
     <CommandPalette />
-    <WaitlistModal />
   </div>
 </template>

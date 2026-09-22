@@ -95,7 +95,7 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
 
     <Reveal class="flex flex-wrap items-center justify-between gap-6 border-t border-border pt-8">
       <PageNext to="/trust" label="Trust Center" blurb="Where a client goes when they ask." class="w-full sm:w-auto sm:min-w-[22rem]" />
-      <WaitlistButton large />
+      <TryNowButton large />
     </Reveal>
   </div>
 </template>

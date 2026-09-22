@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'canvas', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'pactbase — the trust layer between you and your customers',
+      title: 'pactbase | proofs, not promises.',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
             'The consent, trust and rights layer that lives between your business and your customers. Set up in a day.',
         },
         { name: 'theme-color', content: '#FAF8F5' },
-        { property: 'og:title', content: 'pactbase — the trust layer between you and your customers' },
+        { property: 'og:title', content: 'pactbase | proofs, not promises.' },
         {
           property: 'og:description',
           content: 'The consent, trust and rights layer that lives between your business and your customers.',

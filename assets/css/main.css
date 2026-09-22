@@ -70,7 +70,7 @@
     @apply inline-flex items-center gap-2 rounded-full bg-blue-bg px-3 py-1 text-xs font-medium text-blue;
   }
   .mono-label {
-    @apply font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-blue;
+    @apply font-sans text-xs font-medium tracking-normal text-muted;
   }
   .card {
     @apply rounded-2xl border border-border bg-surface shadow-card;
@@ -173,6 +173,14 @@ h3 em,
 }
 .skip-link:focus {
   top: 0.75rem;
+}
+
+/* pactbase's own consent SDK, embedded live on this site. Its accent color
+   comes from a remote org config (still the old brand's green) set via an
+   inline custom property we can't reach from here, so override the button
+   background directly to match the current palette. */
+#sentinel-widget-button {
+  background: var(--blue) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

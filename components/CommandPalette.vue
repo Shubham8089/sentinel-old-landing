@@ -11,7 +11,6 @@ interface Item {
 
 const { isOpen, open, close } = useCommand()
 const router = useRouter()
-const { open: openWaitlist } = useWaitlist()
 
 const q = ref('')
 const idx = ref(0)
@@ -24,7 +23,7 @@ const ITEMS: Item[] = [
   { id: 'demo', label: 'Watch a request move through', hint: 'Demo', to: '/rights#dsar-demo' },
   { id: 'covered', label: 'What’s covered', hint: 'Proof', to: '/covered' },
   { id: 'trust-page', label: 'Our trust center', hint: 'Live', href: TRUST_CENTER_URL },
-  { id: 'waitlist', label: 'Join the waitlist', hint: 'Action', action: openWaitlist },
+  { id: 'try-now', label: 'Try now', hint: 'Live app', href: 'https://app.pactbase.in' },
 ]
 
 const results = computed(() => {
