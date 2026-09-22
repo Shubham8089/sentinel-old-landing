@@ -46,7 +46,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="root" class="card overflow-hidden shadow-hard">
+  <div ref="root" class="card overflow-hidden shadow-card">
     <div class="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-canvas px-5 py-3.5">
       <div>
         <p class="mono-label">Vendor data protection questionnaire · sample</p>
@@ -58,21 +58,21 @@ onBeforeUnmount(() => {
     </div>
 
     <div class="h-1 w-full bg-border" aria-hidden="true">
-      <div class="h-full bg-accent transition-[width] duration-500 ease-calm" :style="{ width: `${(answered / QUESTIONS.length) * 100}%` }" />
+      <div class="h-full bg-blue transition-[width] duration-500 ease-calm" :style="{ width: `${(answered / QUESTIONS.length) * 100}%` }" />
     </div>
 
     <ul class="divide-y divide-border">
       <li v-for="(item, i) in QUESTIONS" :key="item.q" class="flex items-center gap-4 px-5 py-3.5">
         <span
           class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-colors duration-500 ease-calm"
-          :class="i < answered ? 'border-accent bg-accent text-white' : 'border-border bg-white text-transparent'"
+          :class="i < answered ? 'border-blue bg-blue text-white' : 'border-border bg-white text-transparent'"
           aria-hidden="true"
         >
           <svg width="10" height="10" viewBox="0 0 12 12"><path d="M2 6.5l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
         </span>
         <span class="flex-1 text-sm leading-snug" :class="i < answered ? 'text-ink' : 'text-muted'">{{ item.q }}</span>
         <span
-          class="hidden shrink-0 rounded-full bg-accent-bg px-2.5 py-0.5 font-mono text-[11px] text-accent transition-opacity duration-500 ease-calm sm:inline"
+          class="hidden shrink-0 rounded-full bg-blue-bg px-2.5 py-0.5 font-mono text-[11px] text-blue transition-opacity duration-500 ease-calm sm:inline"
           :class="i < answered ? 'opacity-100' : 'opacity-0'"
         >
           {{ item.from }}
@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
 
     <div class="flex flex-wrap items-center justify-between gap-3 border-t border-border bg-canvas px-5 py-4">
       <Transition name="swap" mode="out-in">
-        <p v-if="done" key="done" class="text-sm font-medium text-accent" role="status">
+        <p v-if="done" key="done" class="text-sm font-medium text-blue" role="status">
           All answered. Send one link, not a spreadsheet.
         </p>
         <p v-else key="wait" class="text-sm text-muted">Answering from your Trust Center…</p>

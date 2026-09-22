@@ -21,7 +21,7 @@ const CATS = [
     <div v-if="receipt" key="receipt" class="card p-5" role="status">
       <div class="flex items-start justify-between gap-3">
         <div class="flex items-center gap-2.5">
-          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent-bg text-accent" aria-hidden="true">
+          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-bg text-blue" aria-hidden="true">
             <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6.5l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
           </span>
           <h3 class="font-sans text-sm font-semibold tracking-normal">Consent recorded</h3>
@@ -70,7 +70,7 @@ const CATS = [
             :aria-checked="prefs[cat[0]]"
             :aria-labelledby="`cat-${cat[0]}`"
             class="relative h-6 w-11 shrink-0 rounded-full border transition-colors duration-300 ease-calm"
-            :class="prefs[cat[0]] ? 'border-accent bg-accent' : 'border-border bg-border'"
+            :class="prefs[cat[0]] ? 'border-blue bg-blue' : 'border-border bg-border'"
             @click="prefs[cat[0]] = !prefs[cat[0]]"
           >
             <span

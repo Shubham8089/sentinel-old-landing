@@ -90,7 +90,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', globalKey))
           role="dialog"
           aria-modal="true"
           aria-label="Quick navigation"
-          class="relative w-full max-w-lg overflow-hidden rounded-xl border border-border bg-white shadow-hard-sm"
+          class="relative w-full max-w-lg overflow-hidden rounded-xl border border-border bg-white shadow-soft"
         >
           <input
             ref="input"
@@ -114,12 +114,12 @@ onBeforeUnmount(() => window.removeEventListener('keydown', globalKey))
               role="option"
               :aria-selected="i === idx"
               class="flex cursor-pointer items-center justify-between rounded-lg px-3 py-2.5 text-sm"
-              :class="i === idx ? 'bg-accent-bg text-accent' : 'text-ink'"
+              :class="i === idx ? 'bg-blue-bg text-blue' : 'text-ink'"
               @mouseenter="idx = i"
               @click="run(item)"
             >
               <span>{{ item.label }}</span>
-              <span class="font-mono text-[11px]" :class="i === idx ? 'text-accent' : 'text-muted'">{{ item.hint }}</span>
+              <span class="font-mono text-[11px]" :class="i === idx ? 'text-blue' : 'text-muted'">{{ item.hint }}</span>
             </li>
             <li v-if="!results.length" class="px-3 py-6 text-center text-sm text-muted">Nothing matches that.</li>
           </ul>

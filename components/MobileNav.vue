@@ -15,7 +15,7 @@ const items = [
         <NuxtLink
           :to="item.to"
           class="block rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-300 ease-calm"
-          :class="route.path === item.to ? 'bg-accent-bg text-accent' : 'text-muted hover:text-ink'"
+          :class="route.path === item.to ? 'bg-blue-bg text-blue' : 'text-muted hover:text-ink'"
           :aria-current="route.path === item.to ? 'page' : undefined"
         >
           {{ item.label }}
