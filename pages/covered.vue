@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'What’s covered · Sentinel',
-  description: 'What Sentinel handles for DPDP, what it supports, and what stays with you. Plain lines, so nothing is a surprise.',
+  title: 'What’s covered · pactbase',
+  description: 'What pactbase handles for DPDP, what it supports, and what stays with you. Plain lines, so nothing is a surprise.',
 })
 
 interface Row {
@@ -14,7 +14,7 @@ interface Row {
 const groups: { key: string; title: string; blurb: string; dot: string; rows: Row[] }[] = [
   {
     key: 'handled',
-    title: 'Handled by Sentinel',
+    title: 'Handled by pactbase',
     blurb: 'The front door. We build it, run it and keep it current.',
     dot: 'bg-ok',
     rows: [
@@ -29,7 +29,7 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
     key: 'supported',
     title: 'Supported, and you decide',
     blurb: 'We keep the record and the tools. The judgement is yours.',
-    dot: 'bg-accent',
+    dot: 'bg-blue',
     rows: [
       { title: 'The record behind your answers', body: 'What you process, why, and who else touches it. Vendors and agreements sit alongside.', where: 'Book of record' },
       { title: 'Breach response', ref: 'Section 8(6)', body: 'We keep the log and publish the status page. You decide what happened, and you notify the Board and affected people.', where: 'Book of record' },
@@ -56,7 +56,7 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
       <Reveal>
         <p class="mono-label mb-4">What’s covered</p>
         <h1 class="max-w-3xl text-[clamp(2rem,4.2vw,3.25rem)] leading-[1.08]">
-          What Sentinel handles, and what <em>stays with you.</em>
+          What pactbase handles, and what <em>stays with you.</em>
         </h1>
         <p class="mt-5 max-w-2xl text-base leading-relaxed text-muted">
           Being sorted starts with knowing where the lines are. Here is every obligation we see, who carries it, and
@@ -85,7 +85,7 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
       </ul>
     </section>
 
-    <Reveal class="rounded-xl bg-accent-bg p-6 text-sm leading-relaxed text-accent">
+    <Reveal class="rounded-xl bg-blue-bg p-6 text-sm leading-relaxed text-blue">
       <p>
         This is a guide, not legal advice. How the Act applies depends on what you do with personal data, so have your
         counsel confirm the lines for your business. Section references are to the Digital Personal Data Protection

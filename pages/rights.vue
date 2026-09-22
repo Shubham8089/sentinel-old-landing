@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Rights · Sentinel',
+  title: 'Rights · pactbase',
   description: 'Every data request gets a front door, a clock and an owner. Access, correction, erasure and grievances in one portal.',
 })
 
@@ -33,7 +33,7 @@ const points = [
     </Reveal>
 
     <Reveal class="border-t border-border pt-8">
-      <PageNext to="/covered" label="What’s covered" blurb="What Sentinel handles, and what stays with you." />
+      <PageNext to="/covered" label="What’s covered" blurb="What pactbase handles, and what stays with you." />
     </Reveal>
   </div>
 </template>

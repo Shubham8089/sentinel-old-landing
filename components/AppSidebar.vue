@@ -24,17 +24,17 @@ const groups = [
             <NuxtLink
               :to="item.to"
               class="relative flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-300 ease-calm"
-              :class="isActive(item.to) ? 'bg-accent-bg' : 'hover:bg-white'"
+              :class="isActive(item.to) ? 'bg-blue-bg' : 'hover:bg-white'"
               :aria-current="isActive(item.to) ? 'page' : undefined"
             >
               <span
                 v-if="isActive(item.to)"
-                class="absolute inset-y-2 left-0 w-0.5 rounded-full bg-accent"
+                class="absolute inset-y-2 left-0 w-0.5 rounded-full bg-blue"
                 aria-hidden="true"
               />
               <span>
-                <span class="block text-sm" :class="isActive(item.to) ? 'font-medium text-accent' : 'text-ink'">{{ item.label }}</span>
-                <span v-if="item.blurb" class="block text-xs" :class="isActive(item.to) ? 'text-accent' : 'text-muted'">{{ item.blurb }}</span>
+                <span class="block text-sm" :class="isActive(item.to) ? 'font-medium text-blue' : 'text-ink'">{{ item.label }}</span>
+                <span v-if="item.blurb" class="block text-xs" :class="isActive(item.to) ? 'text-blue' : 'text-muted'">{{ item.blurb }}</span>
               </span>
             </NuxtLink>
           </li>

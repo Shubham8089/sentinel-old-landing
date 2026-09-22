@@ -11,9 +11,8 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: 'DM Sans', provider: 'google', weights: [400, 500, 600, 700] },
-      { name: 'DM Mono', provider: 'google', weights: [400, 500] },
-      { name: 'JetBrains Mono', provider: 'google', weights: [400, 500] },
+      { name: 'Geist', provider: 'google', weights: [400, 500, 600, 700] },
+      { name: 'Geist Mono', provider: 'google', weights: [400, 500] },
     ],
   },
 
@@ -21,23 +20,26 @@ export default defineNuxtConfig({
     pageTransition: { name: 'canvas', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Sentinel: the front door of DPDP',
+      title: 'pactbase — the trust layer between you and your customers',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'Pass the DPDP question every client asks. Sentinel is the consent, trust and rights layer that lives on your front door, set up in a day and kept current.',
+            'The consent, trust and rights layer that lives between your business and your customers. Set up in a day.',
         },
-        { name: 'theme-color', content: '#F7F8F5' },
-        { property: 'og:title', content: 'Sentinel: the front door of DPDP' },
+        { name: 'theme-color', content: '#FAF8F5' },
+        { property: 'og:title', content: 'pactbase — the trust layer between you and your customers' },
         {
           property: 'og:description',
-          content: 'The consent, trust and rights layer that lives on your front door.',
+          content: 'The consent, trust and rights layer that lives between your business and your customers.',
         },
         { property: 'og:type', content: 'website' },
       ],
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'apple-touch-icon', href: '/favicon.svg' },
+      ],
       script: [
         {
           src: 'https://dpdp-prod.vercel.app/sdk/v1/s.js',

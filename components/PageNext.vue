@@ -5,7 +5,7 @@ defineProps<{ to: string; label: string; blurb?: string }>()
 <template>
   <NuxtLink
     :to="to"
-    class="card group flex items-center justify-between gap-6 p-6 transition-colors duration-300 ease-calm hover:border-accent"
+    class="card group flex items-center justify-between gap-6 p-6 transition-colors duration-300 ease-calm hover:border-blue"
   >
     <span>
       <span class="mono-label block">Next</span>

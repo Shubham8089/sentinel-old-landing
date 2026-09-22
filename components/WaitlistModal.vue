@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
             aria-modal="true"
             aria-labelledby="waitlist-title"
             tabindex="-1"
-            class="relative w-full max-w-md rounded-t-2xl border border-border bg-white p-6 shadow-hard-sm outline-none sm:rounded-2xl sm:p-8"
+            class="relative w-full max-w-md rounded-t-2xl border border-border bg-white p-6 shadow-soft outline-none sm:rounded-2xl sm:p-8"
           >
             <div class="flex items-start justify-between gap-6">
               <div>

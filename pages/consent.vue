@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Consent · Sentinel',
+  title: 'Consent · pactbase',
   description: 'A clear choice for every visitor, and a receipt for each one. Banner, preference center and versioned notice.',
 })
 

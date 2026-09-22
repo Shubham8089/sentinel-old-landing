@@ -82,7 +82,7 @@ function onKey(e: KeyboardEvent, i: number) {
         :aria-controls="`panel-${t.id}`"
         :tabindex="active === t.id ? 0 : -1"
         class="shrink-0 border-b-2 px-3 py-2.5 text-sm transition-colors duration-300 ease-calm"
-        :class="active === t.id ? 'border-accent font-medium text-accent' : 'border-transparent text-muted hover:text-ink'"
+        :class="active === t.id ? 'border-blue font-medium text-blue' : 'border-transparent text-muted hover:text-ink'"
         @click="active = t.id"
         @keydown="onKey($event, i)"
       >

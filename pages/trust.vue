@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Trust Center · Sentinel',
-  description: 'A public page that answers the client questionnaire before it is sent: versioned policies, breach status, a named contact.',
+  title: 'Trust Center · pactbase',
+  description: "A public page that shows customers how their data's handled: versioned policies, breach status, a named contact.",
 })
 
 const points = [
@@ -24,22 +24,22 @@ const points = [
   <div class="space-y-14">
     <ModuleHead
       eyebrow="Trust Center"
-      outcome="A public page that answers the client questionnaire before it is sent."
+      outcome="A public page that shows customers how their data's handled."
       :points="points"
     />
 
     <Reveal>
       <figure class="m-0">
         <figcaption class="mb-3 flex flex-wrap items-center justify-between gap-3">
-          <span class="mono-label">Live · Sentinel’s own trust center</span>
+          <span class="mono-label">Live · pactbase’s own trust center</span>
           <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet !px-3 !py-1.5">
             Open in a new tab
           </a>
         </figcaption>
-        <div class="overflow-hidden rounded-2xl border border-border bg-white shadow-hard">
+        <div class="overflow-hidden rounded-2xl border border-border bg-white shadow-card">
           <iframe
             :src="TRUST_CENTER_URL"
-            title="Sentinel trust center"
+            title="pactbase trust center"
             loading="lazy"
             class="block h-[42rem] w-full border-0"
           />
@@ -64,7 +64,7 @@ const points = [
     </section>
 
     <Reveal class="space-y-4 border-t border-border pt-8">
-      <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet -ml-3">See Sentinel’s own trust center, live</a>
+      <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="btn-quiet -ml-3">See pactbase’s own trust center, live</a>
       <PageNext to="/rights" label="Rights" blurb="What happens when a customer writes in." />
     </Reveal>
   </div>
