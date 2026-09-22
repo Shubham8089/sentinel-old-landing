@@ -24,7 +24,7 @@ const TYPES: { value: ReqType; label: string }[] = [
 ]
 const typeLabel = (t: ReqType) => TYPES.find((x) => x.value === t)!.label
 const STATUS: Record<Status, { label: string; dot: string }> = {
-  received: { label: 'Received', dot: 'bg-accent' },
+  received: { label: 'Received', dot: 'bg-blue' },
   verifying: { label: 'Verifying identity', dot: 'bg-warn' },
   fulfilled: { label: 'Fulfilled', dot: 'bg-ok' },
 }
@@ -69,14 +69,14 @@ async function submit() {
   submitting.value = true
   await wait(reduce() ? 0 : 650)
 
-  const ref = `DSAR-${counter++}`
+  const reference = `DSAR-${counter++}`
   const due = Date.now() + 30 * DAY
-  tickets.value.unshift({ ref, type: type.value, email: maskEmail(email.value), status: 'received', dueAt: due, fresh: true })
+  tickets.value.unshift({ ref: reference, type: type.value, email: maskEmail(email.value), status: 'received', dueAt: due, fresh: true })
   tickets.value = tickets.value.slice(0, 6)
   const created = tickets.value[0]
 
-  confirmation.value = { ref, due }
-  announce.value = `Request ${ref} received. Due ${formatDate(due)}.`
+  confirmation.value = { ref: reference, due }
+  announce.value = `Request ${reference} received. Due ${formatDate(due)}.`
   submitting.value = false
   email.value = ''
 
@@ -109,7 +109,7 @@ async function submit() {
               inputmode="email"
               autocomplete="email"
               placeholder="you@example.com"
-              class="w-full rounded-lg border border-border bg-canvas px-3 py-2.5 text-sm placeholder:text-muted focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              class="w-full rounded-lg border border-border bg-canvas px-3 py-2.5 text-sm placeholder:text-muted focus:border-blue focus:outline-none focus-visible:ring-2 focus-visible:ring-blue"
               :aria-invalid="!!error"
               aria-describedby="dsar-error"
             />
@@ -120,7 +120,7 @@ async function submit() {
             <select
               id="dsar-type"
               v-model="type"
-              class="w-full rounded-lg border border-border bg-canvas px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              class="w-full rounded-lg border border-border bg-canvas px-3 py-2.5 text-sm focus:border-blue focus:outline-none focus-visible:ring-2 focus-visible:ring-blue"
             >
               <option v-for="t in TYPES" :key="t.value" :value="t.value">{{ t.label }}</option>
             </select>
@@ -131,7 +131,7 @@ async function submit() {
         </form>
 
         <Transition name="swap">
-          <div v-if="confirmation" class="mt-5 rounded-lg bg-accent-bg p-4 text-sm text-accent">
+          <div v-if="confirmation" class="mt-5 rounded-lg bg-blue-bg p-4 text-sm text-blue">
             <p class="font-medium">Request received.</p>
             <p class="mt-1">
               Your reference is <span class="font-mono font-medium">{{ confirmation.ref }}</span
@@ -157,7 +157,7 @@ async function submit() {
             v-for="t in tickets"
             :key="t.ref"
             class="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-1 rounded-lg border border-border px-4 py-3 transition-colors duration-[1200ms] ease-calm sm:grid-cols-[5.5rem_minmax(0,1fr)_auto]"
-            :class="t.fresh ? 'bg-accent-bg' : 'bg-canvas'"
+            :class="t.fresh ? 'bg-blue-bg' : 'bg-canvas'"
           >
             <span class="font-mono text-sm font-medium">{{ t.ref }}</span>
             <span class="col-span-2 order-last text-sm sm:order-none sm:col-span-1">
