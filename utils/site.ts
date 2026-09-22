@@ -1,5 +1,5 @@
 // Single source of truth for site-wide content.
-export const TRUST_CENTER_URL = 'https://dpdp-prod.vercel.app/portal/landing-page/trust'
+export const TRUST_CENTER_URL = 'https://app.pactbase.in/portal/pactbase/trust'
 
 export interface SiteModule {
   id: 'consent' | 'trust' | 'rights'
