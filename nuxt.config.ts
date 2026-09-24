@@ -42,7 +42,13 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: 'https://dpdp-prod.vercel.app/sdk/v1/s.js',
+          // Must stay the branded custom domain -- the widget's own Trust Center
+          // link (public/sdk/v1/s.js in dpdp-prod) is hardcoded to app.pactbase.in
+          // regardless of where the script itself was loaded from, but this URL
+          // still governs org-config/consent-record fetches and was, until now,
+          // silently pointing at Vercel's internal preview alias instead of the
+          // real domain.
+          src: 'https://app.pactbase.in/sdk/v1/s.js',
           'data-org': 'd94c503e-f36d-48bb-b34b-8fc1413cdccb',
           async: true,
         },
