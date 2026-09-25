@@ -3,12 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --canvas: #faf8f5;
-  --surface: #ffffff;
-  --ink: #17201c;
-  --muted: #6b7269;
-  --hint: #9aa09a;
-  --border: #e7e4dd;
+  --canvas: #ffffff;
+  --surface: #f6f6f4;
+  --ink: #0b0d10;
+  --muted: #565b58;
+  --hint: #8a8f8b;
+  --border: #e4e4e1;
+
+  /* Dark sections: used for full-bleed contrast blocks (hero, CTA bands). */
+  --night: #0b0d10;
+  --night-ink: #f7f7f5;
+  --night-muted: #a3a7a3;
+  --night-border: #262a27;
+  --night-surface: #14171a;
 
   --blue: #2b4dff;
   --blue-hi: #1b34b8;
@@ -49,34 +56,50 @@
   h2,
   h3 {
     font-weight: 600;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-[10px] px-5 py-3 font-sans text-sm font-medium tracking-normal transition-colors duration-200 ease-calm disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 font-sans text-sm font-medium tracking-normal transition-colors duration-200 ease-calm disabled:cursor-not-allowed disabled:opacity-60;
   }
   .btn-primary {
-    @apply btn bg-blue text-white hover:bg-blue-hi;
+    @apply btn bg-ink text-canvas hover:bg-blue;
   }
   .btn-outline {
-    @apply btn border border-border bg-surface text-ink hover:bg-blue-bg;
+    @apply btn border border-border bg-transparent text-ink hover:border-ink;
   }
   .btn-quiet {
-    @apply btn text-blue hover:bg-blue-bg;
+    @apply btn text-ink hover:bg-surface;
+  }
+  .btn-on-dark {
+    @apply btn bg-night-ink text-night hover:bg-blue hover:text-white;
+  }
+  .btn-outline-on-dark {
+    @apply btn border border-night-border bg-transparent text-night-ink hover:border-night-ink;
   }
   .chip {
-    @apply inline-flex items-center gap-2 rounded-full bg-blue-bg px-3 py-1 text-xs font-medium text-blue;
+    @apply inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs font-medium text-muted;
   }
   .mono-label {
-    @apply font-sans text-xs font-medium tracking-normal text-muted;
+    @apply font-mono text-xs font-medium uppercase tracking-[0.08em] text-hint;
   }
   .card {
-    @apply rounded-2xl border border-border bg-surface shadow-card;
+    @apply rounded-xl border border-border bg-canvas;
   }
   .prose-calm {
     @apply text-base leading-relaxed text-ink;
+  }
+
+  /* Full-bleed dark section. Use inside a normally-contained parent: it
+     breaks out to the viewport edges via negative margin, then re-applies
+     the standard container padding to its own content. */
+  .section-dark {
+    @apply relative left-1/2 w-screen -translate-x-1/2 bg-night text-night-ink;
+  }
+  .section-dark .mono-label {
+    @apply text-night-muted;
   }
 }
 

@@ -12,14 +12,12 @@ useNuxtApp().hook('page:transition:finish', () => {
     <NuxtRouteAnnouncer />
     <a href="#main" class="skip-link">Skip to content</a>
     <AppHeader />
-    <MobileNav class="lg:hidden" />
 
-    <div class="mx-auto w-full max-w-[1280px] flex-1 lg:grid lg:grid-cols-[264px_minmax(0,1fr)]">
-      <AppSidebar class="hidden lg:flex" />
-      <main id="main" ref="mainEl" tabindex="-1" class="min-w-0 px-5 py-10 outline-none sm:px-8 lg:px-12 lg:py-14">
+    <main id="main" ref="mainEl" tabindex="-1" class="min-w-0 flex-1 outline-none">
+      <div class="mx-auto w-full max-w-[1280px] px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
         <NuxtPage />
-      </main>
-    </div>
+      </div>
+    </main>
 
     <AppFooter />
     <CommandPalette />

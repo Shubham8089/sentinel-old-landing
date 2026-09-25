@@ -21,8 +21,11 @@ const cards = [
 </script>
 
 <template>
-  <div class="relative" role="img" aria-label="Illustration of the pactbase workspace, using sample data">
-    <div class="overflow-hidden rounded-xl border border-border bg-white shadow-card" aria-hidden="true">
+  <div class="relative [perspective:1600px]" role="img" aria-label="Illustration of the pactbase workspace, using sample data">
+    <div
+      class="group overflow-hidden rounded-xl border border-border bg-white shadow-float transition-transform duration-700 ease-calm [transform:rotateX(4deg)_rotateY(-3deg)] hover:[transform:rotateX(0deg)_rotateY(0deg)]"
+      aria-hidden="true"
+    >
       <!-- window chrome -->
       <div class="flex items-center gap-3 border-b border-border bg-canvas px-4 py-2.5">
         <span class="flex gap-1.5">
@@ -50,13 +53,20 @@ const cards = [
           <div class="flex items-baseline justify-between gap-3">
             <p class="font-bold tracking-tight text-xl">Your front door</p>
             <p class="inline-flex items-center gap-2 text-xs text-ok">
-              <span class="h-1.5 w-1.5 rounded-full bg-ok" />
+              <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-ok" />
               All three live
             </p>
           </div>
 
           <div class="mt-4 grid gap-3 sm:grid-cols-3">
-            <div v-for="c in cards" :key="c.title" class="rounded-lg border border-border bg-canvas p-3.5">
+            <div
+              v-for="(c, i) in cards"
+              :key="c.title"
+              v-motion
+              :initial="{ opacity: 0, y: 10 }"
+              :visible-once="{ opacity: 1, y: 0, transition: { duration: 420, delay: 260 + i * 140, ease: 'easeOut' } }"
+              class="rounded-lg border border-border bg-canvas p-3.5"
+            >
               <div class="flex items-center justify-between gap-2">
                 <p class="text-sm font-medium">{{ c.title }}</p>
                 <span class="inline-flex items-center gap-1.5 whitespace-nowrap font-mono text-[10px] text-ok">
@@ -83,7 +93,10 @@ const cards = [
 
     <!-- floating toast -->
     <div
-      class="absolute -bottom-6 right-3 hidden w-64 rounded-lg border border-border bg-white p-3.5 shadow-soft sm:block lg:right-6"
+      v-motion
+      :initial="{ opacity: 0, y: 16 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 480, delay: 700, ease: 'easeOut' } }"
+      class="absolute -bottom-6 right-3 hidden w-64 rounded-lg border border-border bg-white p-3.5 shadow-float sm:block lg:right-6"
       aria-hidden="true"
     >
       <p class="flex items-center gap-2 text-xs font-medium">

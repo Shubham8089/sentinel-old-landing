@@ -4,16 +4,16 @@ import type { Config } from 'tailwindcss'
 // live in one place and are usable from both Tailwind and plain CSS.
 export default <Partial<Config>>{
   theme: {
-    // Soft, rounded corners everywhere; rounded-full stays for chips and dots.
+    // Tighter, more editorial corners. rounded-full stays for chips and dots.
     borderRadius: {
       none: '0',
-      sm: '6px',
-      DEFAULT: '10px',
-      md: '12px',
-      lg: '14px',
-      xl: '16px',
-      '2xl': '20px',
-      '3xl': '24px',
+      sm: '4px',
+      DEFAULT: '6px',
+      md: '8px',
+      lg: '10px',
+      xl: '12px',
+      '2xl': '16px',
+      '3xl': '20px',
       full: '9999px',
     },
     extend: {
@@ -24,6 +24,13 @@ export default <Partial<Config>>{
         muted: 'var(--muted)',
         hint: 'var(--hint)',
         border: 'var(--border)',
+        night: {
+          DEFAULT: 'var(--night)',
+          ink: 'var(--night-ink)',
+          muted: 'var(--night-muted)',
+          border: 'var(--night-border)',
+          surface: 'var(--night-surface)',
+        },
         blue: {
           DEFAULT: 'var(--blue)',
           hi: 'var(--blue-hi)',
@@ -42,11 +49,11 @@ export default <Partial<Config>>{
         sans: ['Geist', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['Geist Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
-      // Soft, low-contrast lift. No hard offsets, no glow bleed.
+      // Minimal, hairline-first. Shadows only where a surface truly floats.
       boxShadow: {
-        soft: '0 1px 3px rgba(23,32,28,0.06)',
-        card: '0 4px 20px rgba(23,32,28,0.06)',
-        float: '0 12px 40px rgba(43,77,255,0.10)',
+        soft: '0 1px 2px rgba(10,12,15,0.05)',
+        card: '0 2px 12px rgba(10,12,15,0.05)',
+        float: '0 16px 48px rgba(10,12,15,0.16)',
       },
       transitionTimingFunction: {
         calm: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
