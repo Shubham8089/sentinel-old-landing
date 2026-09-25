@@ -20,6 +20,9 @@
   --blue: #2b4dff;
   --blue-hi: #1b34b8;
   --blue-bg: #eef1ff;
+  /* Softer, lighter blue for dark sections — the saturated brand blue reads
+     neon against near-black, so dark sections get this desaturated variant. */
+  --blue-night: #a9b8ff;
   --coral: #ff6b4a;
   --coral-hi: #d84a2b;
   --coral-bg: #fff0ec;
@@ -38,6 +41,10 @@
     font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* .section-dark breaks out to 100vw via negative margin; on some mobile
+       browsers vw is wider than the scrollbar-adjusted viewport, which would
+       otherwise add a horizontal scrollbar site-wide. */
+    overflow-x: hidden;
   }
   body {
     background: var(--canvas);
@@ -74,7 +81,7 @@
     @apply btn text-ink hover:bg-surface;
   }
   .btn-on-dark {
-    @apply btn bg-night-ink text-night hover:bg-blue hover:text-white;
+    @apply btn bg-night-ink text-night hover:bg-blue-night hover:text-night;
   }
   .btn-outline-on-dark {
     @apply btn border border-night-border bg-transparent text-night-ink hover:border-night-ink;
@@ -100,6 +107,12 @@
   }
   .section-dark .mono-label {
     @apply text-night-muted;
+  }
+  .section-dark h1 em,
+  .section-dark h2 em,
+  .section-dark h3 em,
+  .section-dark .accent-em {
+    color: var(--blue-night);
   }
 }
 

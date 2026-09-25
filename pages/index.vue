@@ -18,7 +18,7 @@ const promises = ['Set up in a day', 'Kept current', 'Real, not a PDF']
         <!-- Ambient glow behind the copy/window. Decorative. -->
         <div
           class="pointer-events-none absolute left-1/2 top-0 -z-0 h-[46rem] w-[70rem] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
-          style="background: radial-gradient(ellipse at center, var(--blue) 0%, transparent 65%)"
+          style="background: radial-gradient(ellipse at center, var(--blue-night) 0%, transparent 65%)"
           aria-hidden="true"
         />
 
@@ -49,7 +49,7 @@ const promises = ['Set up in a day', 'Kept current', 'Real, not a PDF']
           <Reveal :delay="300">
             <ul class="mt-9 flex flex-wrap gap-x-6 gap-y-2">
               <li v-for="p in promises" :key="p" class="flex items-center gap-2 text-xs text-night-muted">
-                <svg width="12" height="12" viewBox="0 0 12 12" class="text-blue" aria-hidden="true"><path d="M2 6.5l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <svg width="12" height="12" viewBox="0 0 12 12" class="text-blue-night" aria-hidden="true"><path d="M2 6.5l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
                 {{ p }}
               </li>
             </ul>

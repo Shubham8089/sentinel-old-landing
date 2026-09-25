@@ -35,6 +35,7 @@ export default <Partial<Config>>{
           DEFAULT: 'var(--blue)',
           hi: 'var(--blue-hi)',
           bg: 'var(--blue-bg)',
+          night: 'var(--blue-night)',
         },
         coral: {
           DEFAULT: 'var(--coral)',

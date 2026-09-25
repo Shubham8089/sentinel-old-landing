@@ -21,9 +21,9 @@ const cards = [
 </script>
 
 <template>
-  <div class="relative [perspective:1600px]" role="img" aria-label="Illustration of the pactbase workspace, using sample data">
+  <div class="relative lg:[perspective:1600px]" role="img" aria-label="Illustration of the pactbase workspace, using sample data">
     <div
-      class="group overflow-hidden rounded-xl border border-border bg-white shadow-float transition-transform duration-700 ease-calm [transform:rotateX(4deg)_rotateY(-3deg)] hover:[transform:rotateX(0deg)_rotateY(0deg)]"
+      class="group overflow-hidden rounded-xl border border-border bg-white shadow-float transition-transform duration-700 ease-calm lg:[transform:rotateX(4deg)_rotateY(-3deg)] lg:hover:[transform:rotateX(0deg)_rotateY(0deg)]"
       aria-hidden="true"
     >
       <!-- window chrome -->

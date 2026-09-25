@@ -6,7 +6,7 @@
       </div>
       <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-night-muted">
         <NuxtLink v-for="m in MODULES" :key="m.to" :to="m.to" class="hover:text-night-ink">{{ m.label }}</NuxtLink>
-        <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="font-medium text-night-ink hover:text-blue">Our trust center</a>
+        <a :href="TRUST_CENTER_URL" target="_blank" rel="noopener" class="font-medium text-night-ink hover:text-blue-night">Our trust center</a>
       </nav>
       <p class="text-sm text-night-muted">© 2026 pactbase</p>
     </div>
