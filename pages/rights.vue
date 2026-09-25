@@ -7,15 +7,15 @@ useSeoMeta({
 const points = [
   {
     title: 'A portal on your own domain',
-    body: 'Access, correction, erasure and grievances all come in through one front door.',
+    body: 'One front door for every request type.',
   },
   {
     title: 'A reference number and a clock',
-    body: 'Every request opens a ticket with a 30-day target by default. You can set your own.',
+    body: 'A 30-day target by default.',
   },
   {
-    title: 'Verified, fulfilled, and on record',
-    body: 'Your team checks identity, closes the request, and the trail is kept as evidence.',
+    title: 'Verified, fulfilled, on record',
+    body: 'Closed by your team, with a trail.',
   },
 ]
 </script>

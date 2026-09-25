@@ -28,13 +28,13 @@ const cards = [
     >
       <!-- window chrome -->
       <div class="flex items-center gap-3 border-b border-border bg-canvas px-4 py-2.5">
-        <span class="flex gap-1.5">
+        <span class="flex shrink-0 gap-1.5">
           <span class="h-2.5 w-2.5 rounded-full bg-border" />
           <span class="h-2.5 w-2.5 rounded-full bg-border" />
           <span class="h-2.5 w-2.5 rounded-full bg-border" />
         </span>
-        <span class="mx-auto rounded-md border border-border bg-white px-3 py-0.5 font-mono text-[11px] text-muted">app.pactbase · Acme Retail</span>
-        <span class="font-mono text-[11px] text-muted">sample data</span>
+        <span class="mx-auto min-w-0 max-w-[11rem] truncate rounded-md border border-border bg-white px-3 py-0.5 font-mono text-[11px] text-muted sm:max-w-none">app.pactbase · Acme Retail</span>
+        <span class="hidden shrink-0 font-mono text-[11px] text-muted sm:inline">sample data</span>
       </div>
 
       <div class="grid md:grid-cols-[10.5rem_minmax(0,1fr)]">

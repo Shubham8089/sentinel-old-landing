@@ -8,16 +8,16 @@ const { log } = useConsent()
 
 const points = [
   {
-    title: 'A banner and preference center in your visitors’ language',
-    body: 'Accept and reject carry equal weight, and anyone can choose category by category.',
+    title: 'A banner in your visitors’ language',
+    body: 'Accept and reject carry equal weight.',
   },
   {
-    title: 'A privacy notice that stays linked and versioned',
-    body: 'What someone agreed to is always the exact text they saw, and you can show it.',
+    title: 'A notice that stays versioned',
+    body: 'Always the exact text they agreed to.',
   },
   {
-    title: 'Withdrawing is as easy as agreeing',
-    body: 'A change of mind takes one click, and every change is logged as its own receipt.',
+    title: 'Withdrawing is one click',
+    body: 'Every change logged as a receipt.',
   },
 ]
 

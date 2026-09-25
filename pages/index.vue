@@ -7,7 +7,6 @@ useSeoMeta({
   ogDescription: 'The consent, trust and rights layer that lives between your business and your customers.',
 })
 
-const promises = ['Set up in a day', 'Kept current', 'Real, not a PDF']
 </script>
 
 <template>
@@ -34,8 +33,8 @@ const promises = ['Set up in a day', 'Kept current', 'Real, not a PDF']
           </Reveal>
 
           <Reveal variant="mask" :delay="160">
-            <p class="mt-7 max-w-2xl text-lg leading-relaxed text-night-muted">
-              Consent, a trust center, and data requests. Handled in one place, on your front door. Set up in a day.
+            <p class="mt-7 max-w-xl text-lg leading-relaxed text-night-muted">
+              Set up in a day. On your front door.
             </p>
           </Reveal>
 
@@ -44,15 +43,6 @@ const promises = ['Set up in a day', 'Kept current', 'Real, not a PDF']
               <TryNowButton large variant="light" />
               <a href="#how-h" class="btn-outline-on-dark !h-14 !px-7 !text-sm">See how it works</a>
             </div>
-          </Reveal>
-
-          <Reveal :delay="300">
-            <ul class="mt-9 flex flex-wrap gap-x-6 gap-y-2">
-              <li v-for="p in promises" :key="p" class="flex items-center gap-2 text-xs text-night-muted">
-                <svg width="12" height="12" viewBox="0 0 12 12" class="text-blue-night" aria-hidden="true"><path d="M2 6.5l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                {{ p }}
-              </li>
-            </ul>
           </Reveal>
 
           <Reveal variant="scale" :delay="120" class="mt-16">
@@ -70,10 +60,6 @@ const promises = ['Set up in a day', 'Kept current', 'Real, not a PDF']
           <h2 id="q-h" class="max-w-3xl text-[clamp(2rem,4.2vw,3.25rem)] leading-[1.08]">
             One link that answers <em class="accent-em">the trust question.</em>
           </h2>
-          <p class="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-            Clients and partners ask the same questions about how you handle their data. With a Trust Center, the
-            answers are already published, current and one link away.
-          </p>
         </Reveal>
         <div class="mt-10 max-w-3xl">
           <QuestionnaireDemo />

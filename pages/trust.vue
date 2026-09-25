@@ -6,16 +6,16 @@ useSeoMeta({
 
 const points = [
   {
-    title: 'Policies in one place, versioned and multilingual',
-    body: 'Publish once, keep every version on record, and offer them in the languages your customers read.',
+    title: 'Policies, versioned and multilingual',
+    body: 'Publish once, every version on record.',
   },
   {
-    title: 'A breach status page and a named contact',
-    body: 'People know where to look when something happens and whom to ask when they have a question.',
+    title: 'A breach status page',
+    body: 'A named contact, always reachable.',
   },
   {
     title: 'Your posture, shown plainly',
-    body: 'Only what is true, kept current as things change, so the page never drifts from reality.',
+    body: 'Only what is true, kept current.',
   },
 ]
 </script>
@@ -54,8 +54,7 @@ const points = [
           A book of record that <em>backs it up.</em>
         </h2>
         <p class="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-          Every claim on the page is backed by a record: receipts, notice versions, requests, vendors and the breach
-          log. It is your evidence pack, ready when a client or auditor asks.
+          Your evidence pack, ready when a client or auditor asks.
         </p>
       </Reveal>
       <Reveal :delay="100">

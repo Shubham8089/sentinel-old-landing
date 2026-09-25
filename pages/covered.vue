@@ -59,8 +59,7 @@ const groups: { key: string; title: string; blurb: string; dot: string; rows: Ro
           What pactbase handles, and what <em>stays with you.</em>
         </h1>
         <p class="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-          Being sorted starts with knowing where the lines are. Here is every obligation we see, who carries it, and
-          where it lives. The front door is handled. The rest is mapped, so nothing is a surprise.
+          Every obligation, who carries it, where it lives. The front door is handled — the rest is mapped.
         </p>
       </Reveal>
     </header>
