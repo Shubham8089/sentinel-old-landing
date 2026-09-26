@@ -3,7 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@vueuse/motion/nuxt'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@vueuse/motion/nuxt', '@nuxtjs/sitemap'],
+
+  site: {
+    url: 'https://pactbase.in',
+  },
 
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
