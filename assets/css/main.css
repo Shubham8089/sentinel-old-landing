@@ -49,7 +49,10 @@
   body {
     background: var(--canvas);
     min-height: 100vh;
-    overflow-x: hidden;
+    /* `clip` (unlike `hidden`) doesn't force overflow-y to `auto`, so it
+       doesn't turn body into its own scroll container and break the
+       position: sticky panels in StoryScroll. */
+    overflow-x: clip;
   }
   ::selection {
     background: var(--blue-bg);
