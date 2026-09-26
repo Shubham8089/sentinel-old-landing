@@ -63,6 +63,30 @@ export default defineNuxtConfig({
         {
           innerHTML: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ylabboacgo");`,
         },
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'pactbase',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            url: 'https://www.pactbase.in',
+            description:
+              'pactbase is the consent, trust center, and data-rights layer that sits between an Indian business and its customers. Set up in a day.',
+            offers: { '@type': 'Offer', category: 'SaaS' },
+            publisher: {
+              '@type': 'Organization',
+              name: 'pactbase',
+              url: 'https://www.pactbase.in',
+              logo: 'https://www.pactbase.in/pactbase-wordmark.svg',
+            },
+            audience: {
+              '@type': 'Audience',
+              audienceType: 'Indian SMBs, agencies, CA firms, clinics, D2C businesses',
+            },
+          }),
+        },
       ],
     },
   },

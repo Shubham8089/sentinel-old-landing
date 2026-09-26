@@ -1,0 +1,27 @@
+# pactbase
+
+> pactbase is the consent, trust center, and data-rights layer that sits between an Indian business and its customers. Set up in a day. proofs, not promises.
+
+## What it is
+
+pactbase bundles three things into one shareable front door:
+
+- Consent — cookie and data consent banner in the visitor's language, with per-visitor receipts and easy withdrawal. Includes an embeddable consent SDK.
+- Trust Center — a shareable page with versioned privacy policies, breach status, DPO contact, and compliance posture. One link a business sends when a client asks if they are DPDP-ready.
+- Rights — a data-rights request portal (access, correction, erasure, nomination) plus grievance intake, with reference numbers and a 30-day SLA clock.
+
+## Who it is for
+
+Indian SMBs and mid-market businesses navigating the Digital Personal Data Protection (DPDP) Act, 2023 — marketing agencies, CA and legal firms, clinics and health practices, and D2C or services businesses. Priced and built for self-serve setup, not enterprise procurement.
+
+## How it is positioned
+
+pactbase is the outward-facing front door of DPDP (consent, trust, rights), kept current as a live state rather than delivered as a one-time compliance PDF. It is deliberately lighter than enterprise platforms (Privy, OneTrust) and deeper than cookie-only tools.
+
+## Links
+
+- Website: https://www.pactbase.in
+- App: https://app.pactbase.in
+- Consent: https://www.pactbase.in/consent
+- Trust Center: https://www.pactbase.in/trust
+- Rights: https://www.pactbase.in/rights
