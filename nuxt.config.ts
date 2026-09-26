@@ -35,6 +35,14 @@ export default defineNuxtConfig({
           content: 'The consent, trust and rights layer that lives between your business and your customers.',
         },
         { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: '/thumbnail.svg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'pactbase | proofs, not promises.' },
+        {
+          name: 'twitter:description',
+          content: 'The consent, trust and rights layer that lives between your business and your customers.',
+        },
+        { name: 'twitter:image', content: '/thumbnail.svg' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
